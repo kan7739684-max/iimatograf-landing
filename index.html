@@ -3,46 +3,35 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>ИИМАТОГРАФ — вебинар</title>
-<meta name="description" content="ИИМАТОГРАФ — это лаборатория цифрового творчества. Приглашаем на вебинар.">
+<title>«Союз ИИМАТОГРАФИСТОВ» — вступайте в творческое сообщество | ИИМАТОГРАФ</title>
+<meta name="description" content="Вступайте в «Союз ИИМАТОГРАФИСТОВ» — сообщество людей, которые вместе с искусственным интеллектом создают сказки, притчи, песни, анимированных персонажей и фильмы. Стартовый интенсив, занятия с экспертами каждую неделю и единомышленники рядом.">
 <meta name="theme-color" content="#070a1c">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="ИИМАТОГРАФ">
+<meta property="og:title" content="Приветствуем вас в «Союзе ИИМАТОГРАФИСТОВ»!">
+<meta property="og:description" content="От курсов — к живому сообществу. Творчество не заканчивается на последнем уроке. Стартовый интенсив, занятия с экспертами и единомышленники рядом.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Приветствуем вас в «Союзе ИИМАТОГРАФИСТОВ»!">
+<meta name="twitter:description" content="От курсов — к живому сообществу. Творчество не заканчивается на последнем уроке.">
 
 <script>
 /* =====================================================================
-   НАСТРОЙКИ ВЕБИНАРА — редактируйте только этот блок
+   НАСТРОЙКИ СТРАНИЦЫ «СОЮЗ ИИМАТОГРАФИСТОВ» — редактируйте только этот блок
    ---------------------------------------------------------------------
-   title            — тема вебинара (заголовок на странице)
-   date             — дата и время (бейдж в шапке и в блоке «Записаться»)
-   registrationUrl  — ссылка на регистрацию (все кнопки «Записаться»)
+   registrationUrl  — ссылка на оплату/вступление (все кнопки).
+                      Параметры адресной строки её НЕ переопределяют.
    videoUrl         — ссылка на ролик. Пусто '' — показывается раскадровка.
                       Поддерживается: YouTube, Vimeo, RuTube, VK Видео,
                       прямые файлы .mp4 / .webm / .ogg
-   ctaText          — текст на кнопках
-   program          — карточки программы: { title: '...', text: '...' }
-
-   Всё это можно переопределить параметрами адресной строки, не меняя файл:
-     ?title=Тема&date=15%20октября%2C%2019:00&reg=https://...&video=https://...
-     &program=Пункт%201|Пункт%202|Пункт%203   (пункты через «|»)
+   ctaText          — текст на всех кнопках
+   priceLine        — строка с ценой под кнопками. Пусто '' — строка скрыта.
    ===================================================================== */
-const WEBINAR = {
-  title: 'Сказки, басни и притчи вместе с детьми и нейросетями',
-  date: 'Скоро',
+const SOYUZ = {
   registrationUrl: 'https://cinematoschool.ru/iimatograf_pay',
   videoUrl: 'https://rutube.ru/video/cb2cfa4675796c803f71f7c802a8162e/',
-  ctaText: 'Записаться',
-
-  program: [
-    { title: 'Зачем педагогу нейросети',
-      text: 'Что умеют нейросети и чем они могут помочь на занятиях с детьми.' },
-    { title: 'Как придумать сказку, басню и притчу вместе с детьми',
-      text: 'От идеи и героев до морали: дети сочиняют, нейросеть помогает.' },
-    { title: 'Иллюстрации и мультик из истории',
-      text: 'Как превратить придуманную историю в картинки и короткий ролик.' },
-    { title: 'Безопасность и советы',
-      text: 'Как работать с нейросетями бережно и безопасно для детей.' },
-    { title: 'Ответы на вопросы',
-      text: 'Разберём ваши вопросы о творчестве с нейросетями.' }
-  ],
+  ctaText: 'Записаться на интенсив',
+  priceLine: 'Вступительный взнос — 2 900 ₽',
 
   /* Бренд (обычно менять не нужно) */
   brand: 'ИИМАТОГРАФ',
@@ -300,7 +289,7 @@ h2{margin:8px 0 0;font-family:var(--serif);font-weight:700;font-size:clamp(2rem,
 .past-future .f{padding:12px;border-radius:16px;background:linear-gradient(135deg,rgba(95,184,255,.25),rgba(159,216,255,.35));color:#e3f4ff}
 .past-future .x{width:44px;aspect-ratio:1;background:var(--img-ring) center/contain no-repeat;mix-blend-mode:screen;animation:spin 12s linear infinite}
 
-/* ---------- program ---------- */
+/* ---------- benefit cards ---------- */
 .program{background:linear-gradient(rgba(7,10,28,.35),rgba(7,10,28,.35))}
 .cards{display:grid;gap:16px;counter-reset:c;padding:0;margin:0;list-style:none}
 .card{
@@ -388,6 +377,63 @@ footer .handle{display:inline-block;font-weight:800;color:var(--ice);text-decora
   *,*::before,*::after{animation:none!important;transition:none!important}
   .js .reveal{opacity:1;transform:none}
 }
+
+/* ===================== Союз ИИМАТОГРАФИСТОВ — дополнения ===================== */
+.hero h1 .nm{white-space:nowrap;hyphens:manual;-webkit-hyphens:manual}
+.hero-lead{margin:16px auto 0;max-width:720px;font-family:var(--serif);font-style:italic;font-weight:600;
+  font-size:clamp(1.2rem,4.4vw,1.6rem);color:var(--gold-2);line-height:1.35}
+.price-line{display:inline-block;margin:18px 0 0;padding:8px 18px;border-radius:999px;font-weight:700;font-size:1rem;
+  color:var(--text);background:rgba(13,19,48,.6);border:1px solid rgba(246,200,106,.4);box-shadow:0 0 18px rgba(246,200,106,.12)}
+.price-line[hidden]{display:none}
+.price-line b{color:var(--gold-2);white-space:nowrap}
+.cta .price-wrap{margin-top:4px}
+
+/* quote in «Кто мы» */
+.quote{position:relative;margin:24px 0 0;padding:20px 22px 20px 26px;border-radius:18px;
+  background:linear-gradient(135deg,rgba(138,90,43,.35),rgba(95,184,255,.16));border:1px solid rgba(246,200,106,.3);
+  font-family:var(--serif);font-style:italic;font-weight:600;font-size:clamp(1.15rem,3.8vw,1.4rem);line-height:1.35;color:#fff}
+.quote::before{content:"";position:absolute;left:0;top:16px;bottom:16px;width:3px;border-radius:3px;background:linear-gradient(var(--gold),var(--ice))}
+
+/* «Для кого» */
+.who{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:0;margin:0;list-style:none}
+.who li{position:relative;display:flex;align-items:center;gap:12px;padding:16px 16px;border-radius:18px;font-weight:800;font-size:1.02rem;color:#fff;
+  background:linear-gradient(140deg,rgba(24,30,66,.82),rgba(12,16,40,.82));border:1px solid rgba(246,200,106,.22);
+  box-shadow:0 10px 30px rgba(0,0,0,.3);transition:transform .3s,border-color .3s}
+.who li:hover{transform:translateY(-3px);border-color:rgba(246,200,106,.6)}
+.who li::before{content:"";flex:none;width:12px;height:12px;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#fff3cf,#f6c86a 55%,#c9862f);box-shadow:0 0 12px rgba(246,200,106,.7)}
+.who li:nth-child(even)::before{background:radial-gradient(circle at 35% 30%,#f2fbff,#9fd8ff 55%,#4b9be0);box-shadow:0 0 12px rgba(159,216,255,.7)}
+.who li.all{justify-content:center;text-align:center;font-family:var(--serif);font-style:italic;font-weight:700;font-size:1.25rem;
+  color:var(--gold-2);background:linear-gradient(90deg,rgba(217,151,58,.22),rgba(95,184,255,.18));border-color:rgba(246,200,106,.45)}
+.who li.all::before{display:none}
+.who-note{text-align:center;margin:22px auto 0;max-width:680px;color:var(--muted)}
+
+/* «Работы участников» */
+.works{display:grid;gap:18px}
+.work .screen{aspect-ratio:16/9}
+.work-ph{position:absolute;inset:0;background:var(--img) center/cover no-repeat;filter:brightness(.42) saturate(.85)}
+.work .play{top:50%}
+.work .play .label{white-space:normal;max-width:240px;line-height:1.4;letter-spacing:.08em;font-size:.72rem}
+.work-cap{margin:10px 4px 0;font-weight:700;color:var(--muted);font-size:.95rem;text-align:center}
+
+.welcome{margin:22px 0 0;font-family:var(--serif);font-weight:700;font-size:clamp(1.35rem,4.6vw,1.9rem);line-height:1.2;color:var(--gold-2);
+  text-shadow:0 0 20px rgba(246,200,106,.4)}
+.cta h2{max-width:900px;margin-inline:auto}
+
+@media (max-width:719px){
+  .topbar .wrap{gap:8px}
+  .logo{font-size:1rem;letter-spacing:.1em}
+  .top-cta{font-size:.78rem;padding:8px 12px;white-space:nowrap}
+  .who{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+  .who li{flex:1 1 auto;justify-content:center;font-size:.95rem;padding:13px 16px;gap:9px}
+  .who li.all{flex-basis:100%;font-size:1.15rem}
+  .work .screen{aspect-ratio:16/9}
+}
+@media (min-width:720px){
+  .who{grid-template-columns:repeat(4,1fr)}
+  .who li.all{grid-column:auto/span 1}
+  .works{grid-template-columns:repeat(3,1fr)}
+}
 </style>
 </head>
 <body>
@@ -395,32 +441,31 @@ footer .handle{display:inline-block;font-weight:800;color:var(--ice);text-decora
 <div class="page-bg" aria-hidden="true"></div>
 <div class="sparkles" id="sparkles" aria-hidden="true"></div>
 
+<!-- 1. HEADER -->
 <header class="topbar">
   <div class="wrap">
     <a class="logo" href="#top"><span data-bind="brand">ИИМАТОГРАФ</span><small data-bind="subtitle">лаборатория цифрового творчества</small></a>
-    <a class="top-cta" data-reg href="#" data-bind="ctaText">Записаться</a>
+    <a class="top-cta" data-reg href="https://cinematoschool.ru/iimatograf_pay" data-bind="ctaText">Записаться на интенсив</a>
   </div>
 </header>
 
 <main id="top">
-  <!-- 1. HERO -->
+  <!-- 2. HERO -->
   <section class="hero">
     <div class="wrap">
       <span class="eyebrow reveal" data-bind="handle">@AImatograf</span>
-      <p class="wordmark reveal d1" aria-label="Девиз">«<span data-bind="motto">ИИМАТОГРАФ</span>»</p>
+      <p class="wordmark reveal d1" aria-label="ИИМАТОГРАФ">«<span data-bind="motto">ИИМАТОГРАФ</span>»</p>
       <p class="subtitle reveal d1"><b data-bind="brand">ИИМАТОГРАФ</b> — это <span data-bind="subtitle">лаборатория цифрового творчества</span></p>
       <div class="divider"></div>
-      <p class="kicker reveal d2">Приглашаем на вебинар</p>
-      <h1 class="reveal d2" data-bind="title">Сказки, басни и притчи вместе с детьми и нейросетями</h1>
-      <div class="reveal d3">
-        <span class="date-badge"><span class="dot"></span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-          <span data-bind="date">Скоро</span></span>
-      </div>
+      <p class="kicker reveal d2">Вступление в Союз</p>
+      <h1 class="reveal d2">Приветствуем вас в <span class="nm">«Союзе</span> <span class="nm">ИИМАТОГРАФИСТОВ»!</span></h1>
+      <p class="hero-lead reveal d2">От курсов — к живому сообществу. Творчество не заканчивается на последнем уроке.</p>
       <div class="actions reveal d3">
-        <a class="btn" data-reg href="#"><span data-bind="ctaText">Записаться</span>
+        <a class="btn" data-reg href="https://cinematoschool.ru/iimatograf_pay"><span data-bind="ctaText">Записаться на интенсив</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
+      <!-- PRICE_LINE: текст берётся из SOYUZ.priceLine (пусто '' — строка скрыта) -->
+      <div class="reveal d3"><p class="price-line" data-price>Вступительный взнос — 2 900 ₽</p></div>
 
       <div class="banner reveal">
         <div class="halo"></div>
@@ -433,39 +478,36 @@ footer .handle{display:inline-block;font-weight:800;color:var(--ice);text-decora
     </div>
   </section>
 
-  <!-- 2. VIDEO / STORYBOARD -->
+  <!-- 3. VIDEO -->
   <section class="video" id="video">
     <div class="wrap">
       <div class="sec-head reveal">
         <div class="ring-deco"></div>
         <span class="sec-label">Ролик</span>
         <h2>Когда прошлое встречает будущее</h2>
-        <p class="lead" id="videoLead">Короткая история о том, как дети из прошлого попадают в класс будущего.</p>
+        <p class="lead">Короткая история о том, как дети из прошлого попадают в класс будущего.</p>
       </div>
       <div class="screen reveal" id="screen" aria-live="polite"></div>
       <div class="dots" id="dots" role="tablist" aria-label="Кадры раскадровки"></div>
     </div>
   </section>
 
-  <!-- 3. ABOUT -->
+  <!-- 4. КТО МЫ -->
   <section class="about" id="about">
     <div class="wrap">
       <div class="sec-head reveal">
         <div class="ring-deco"></div>
         <span class="sec-label">О нас</span>
-        <h2>О <span data-bind="brand">ИИМАТОГРАФ</span></h2>
+        <h2>Кто мы</h2>
       </div>
       <div class="about-grid">
         <div class="about-text reveal">
-          <p class="big"><b data-bind="brand">ИИМАТОГРАФ</b> — это <span data-bind="subtitle">лаборатория цифрового творчества</span>.</p>
-          <p>Здесь педагоги и дети вместе придумывают истории, рисуют картинки и создают видео с помощью нейросетей.</p>
-          <p>Мы соединяем тёплую память прошлого и возможности будущего: знакомые сказки, басни и притчи оживают в новых образах, а дети становятся авторами.</p>
+          <p class="big"><b>«Союз&nbsp;ИИМАТОГРАФИСТОВ»</b> — это сообщество людей, которые вместе с искусственным интеллектом создают сказки, притчи, песни, анимированных персонажей и фильмы.</p>
+          <p>Здесь не нужно быть программистом или профессиональным художником. Нейросети берут на себя технику, а вы — замысел, смысл и душу истории.</p>
           <ul class="pills">
-            <li>Истории</li><li>Картинки</li><li>Видео</li><li>Нейросети</li><li>Педагоги и дети</li>
+            <li>Сказки</li><li>Притчи</li><li>Песни</li><li>Анимированные персонажи</li><li>Фильмы</li>
           </ul>
-          <div class="past-future">
-            <div class="p">Прошлое</div><div class="x" aria-hidden="true"></div><div class="f">Будущее</div>
-          </div>
+          <blockquote class="quote">«Будущее принадлежит не тем, кто знает больше кнопок, а тем, кто умеет превращать идеи в истории, которые трогают сердца.»</blockquote>
         </div>
         <div class="photos reveal d1">
           <div class="photo portal" role="img" aria-label="Мальчик из прошлого и девочка в VR-очках касаются ладонями через портал"><div class="glow"></div></div>
@@ -475,39 +517,97 @@ footer .handle{display:inline-block;font-weight:800;color:var(--ice);text-decora
     </div>
   </section>
 
-  <!-- 4. PROGRAM -->
-  <section class="program" id="program">
+  <!-- 5. ЧТО ВЫ ПОЛУЧАЕТЕ -->
+  <section class="program" id="benefits">
     <div class="wrap">
       <div class="sec-head reveal">
         <div class="ring-deco"></div>
-        <span class="sec-label">Программа</span>
-        <h2>Что будет на вебинаре</h2>
+        <span class="sec-label">Преимущества</span>
+        <h2>Что вы получаете, вступая в Союз</h2>
       </div>
-      <ol class="cards" id="cards"></ol>
-      <div class="after reveal"><a class="btn" data-reg href="#"><span data-bind="ctaText">Записаться</span></a></div>
+      <ol class="cards">
+        <li class="card reveal d1"><h3>Стартовый интенсив —&nbsp;2&nbsp;недели</h3><p>Освоите базовые инструменты и создадите свои первые работы.</p></li>
+        <li class="card reveal d2"><h3>3 месяца в закрытом сообществе</h3><p>Уже включены во вступительный взнос — без доплаты.</p></li>
+        <li class="card reveal d3"><h3>Занятие с экспертами каждую неделю</h3><p>Практика и прокачка навыков — каждую неделю новое живое занятие.</p></li>
+        <li class="card reveal d1"><h3>Новые техники и инструменты</h3><p>Свежие приёмы, новые нейросети и новости из мира искусственного интеллекта.</p></li>
+        <li class="card reveal d2"><h3>Регулярность — наша забота</h3><p>Ритм задают эксперты: не нужно самим искать, что изучать дальше.</p></li>
+        <li class="card reveal d3"><h3>Единомышленники рядом</h3><p>Участники делятся работами, вдохновляют и поддерживают друг друга.</p></li>
+        <li class="card reveal d1"><h3>Творчество для себя и вместе с детьми</h3><p>Создавайте истории для души — и вместе с детьми, внуками или учениками.</p></li>
+      </ol>
+      <div class="after reveal"><a class="btn" data-reg href="https://cinematoschool.ru/iimatograf_pay"><span data-bind="ctaText">Записаться на интенсив</span></a></div>
     </div>
   </section>
 
-  <!-- 5. CTA -->
+  <!-- 6. ДЛЯ КОГО -->
+  <section class="for-whom" id="for-whom">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="ring-deco"></div>
+        <span class="sec-label">Для кого</span>
+        <h2>Кому подойдёт Союз</h2>
+      </div>
+      <ul class="who reveal">
+        <li>Педагоги</li><li>Родители</li><li>Студенты</li><li>Предприниматели</li>
+        <li>Художники</li><li>Блогеры</li><li>Пенсионеры</li><li class="all">и все, кто хочет творить</li>
+      </ul>
+      <p class="who-note reveal">Независимо от профессии и опыта — достаточно желания создавать свои истории.</p>
+    </div>
+  </section>
+
+  <!-- 7. РАБОТЫ УЧАСТНИКОВ (заготовка)
+       Как добавить работу: внутри нужного <div class="screen"> замените
+       <div class="work-ph" ...></div> и <div class="play">...</div> на плеер:
+         Rutube: <iframe src="https://rutube.ru/play/embed/ID_ВИДЕО" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen loading="lazy" title="Работа участника"></iframe>
+         Vimeo:  <iframe src="https://player.vimeo.com/video/ID_ВИДЕО" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy" title="Работа участника"></iframe>
+       ID_ВИДЕО — часть ссылки после /video/ (rutube.ru/video/ID_ВИДЕО/ или vimeo.com/ID_ВИДЕО).
+       В <p class="work-cap"> впишите название работы и имя автора.
+       Стили iframe внутри .screen уже готовы (растягивается на всю карточку 16:9). -->
+  <section class="works-sec" id="works">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="ring-deco"></div>
+        <span class="sec-label">Галерея</span>
+        <h2>Работы участников</h2>
+        <p class="lead">Здесь будут сказки, песни и фильмы, созданные в «Союзе&nbsp;ИИМАТОГРАФИСТОВ».</p>
+      </div>
+      <div class="works">
+        <div class="work reveal d1">
+          <div class="screen"><div class="work-ph" style="--img:var(--img-miracle)"></div>
+            <div class="play"><div class="circle"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></div><div class="label">Скоро здесь появятся работы участников Союза</div></div></div>
+          <p class="work-cap">Работа участника · скоро</p>
+        </div>
+        <div class="work reveal d2">
+          <div class="screen"><div class="work-ph" style="--img:var(--img-earth)"></div>
+            <div class="play"><div class="circle"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></div><div class="label">Скоро здесь появятся работы участников Союза</div></div></div>
+          <p class="work-cap">Работа участника · скоро</p>
+        </div>
+        <div class="work reveal d3">
+          <div class="screen"><div class="work-ph" style="--img:var(--img-tablet)"></div>
+            <div class="play"><div class="circle"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></div><div class="label">Скоро здесь появятся работы участников Союза</div></div></div>
+          <p class="work-cap">Работа участника · скоро</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. ФИНАЛЬНЫЙ ПРИЗЫВ -->
   <section class="cta" id="register">
     <div class="wrap">
       <div class="cta-box reveal">
         <div class="cta-ring" aria-hidden="true"></div>
         <span class="sec-label">Присоединяйтесь</span>
-        <h2>Записывайтесь на вебинар</h2>
-        <p class="cta-title">«<span data-bind="title">Сказки, басни и притчи вместе с детьми и нейросетями</span>»</p>
-        <span class="date-badge"><span class="dot"></span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-          <span data-bind="date">Скоро</span></span>
-        <div class="actions"><a class="btn" data-reg href="#"><span data-bind="ctaText">Записаться</span>
+        <h2>Это больше, чем обучение, — приглашение в новую творческую жизнь</h2>
+        <p class="cta-title">Если вы давно мечтали творить, но не знали, с чего начать, — начните вместе с нами.</p>
+        <div class="actions"><a class="btn" data-reg href="https://cinematoschool.ru/iimatograf_pay"><span data-bind="ctaText">Записаться на интенсив</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-        <p class="fine">Для педагогов и всех, кто творит вместе с детьми.</p>
+        <div class="price-wrap"><p class="price-line" data-price>Вступительный взнос — 2 900 ₽</p></div>
+        <p class="welcome">Добро пожаловать в «Союз&nbsp;ИИМАТОГРАФИСТОВ»!</p>
       </div>
     </div>
   </section>
 </main>
 
-<!-- 6. FOOTER -->
+<!-- 9. FOOTER -->
 <footer>
   <div class="wrap">
     <div class="fbrand" data-bind="brand">ИИМАТОГРАФ</div>
@@ -516,38 +616,33 @@ footer .handle{display:inline-block;font-weight:800;color:var(--ice);text-decora
   </div>
 </footer>
 
-<div class="sticky" id="sticky"><a class="btn" data-reg href="#"><span data-bind="ctaText">Записаться</span></a></div>
+<div class="sticky" id="sticky"><a class="btn" data-reg href="https://cinematoschool.ru/iimatograf_pay"><span data-bind="ctaText">Записаться на интенсив</span></a></div>
 
 <script>
 (function(){
   'use strict';
-  var C = Object.assign({}, WEBINAR);
-
-  /* ---- URL overrides: ?title= &date= &reg= &video= &program=a|b|c ---- */
-  var q = new URLSearchParams(location.search);
-  function qp(){ for (var i=0;i<arguments.length;i++){ var v=q.get(arguments[i]); if(v!==null && v.trim()!=='') return v.trim(); } return null; }
-  var v;
-  if ((v=qp('title')))                   C.title = v;
-  if ((v=qp('date')))                    C.date = v;
-  if ((v=qp('reg','registrationUrl','url'))) C.registrationUrl = v;
-  if ((v=qp('video','videoUrl')))        C.videoUrl = v;
-  if ((v=qp('cta','ctaText')))           C.ctaText = v;
-  if ((v=qp('program'))) C.program = v.split('|').map(function(s){ return {title:s.trim(), text:''}; }).filter(function(p){return p.title;});
+  var C = Object.assign({}, SOYUZ);
+  /* Параметры адресной строки (?reg=, ?url=, ?title= и т.п.) намеренно НЕ поддерживаются:
+     старые ссылки не могут подменить ссылку на оплату или тексты страницы. */
 
   /* ---- safe link (no javascript: etc.) ---- */
   function safeUrl(u){
     u = String(u||'').trim(); if(!u) return '#';
     if (/^(#|\/|\.\/|\.\.\/)/.test(u)) return u;
     try { var p = new URL(u, location.href); if (/^(https?:|mailto:|tel:)$/.test(p.protocol)) return p.href; } catch(e){}
-    if (/^[\w.-]+\.[a-z]{2,}(\/|$)/i.test(u)) return 'https://' + u;   // "site.ru/reg"
+    if (/^[\w.-]+\.[a-z]{2,}(\/|$)/i.test(u)) return 'https://' + u;
     return '#';
   }
 
   /* ---- fill text bindings ---- */
   document.querySelectorAll('[data-bind]').forEach(function(el){
-    var k = el.getAttribute('data-bind'); if (C[k] != null) el.textContent = C[k];
+    var k = el.getAttribute('data-bind'); if (C[k] != null && C[k] !== '') el.textContent = C[k];
   });
-  document.title = C.brand + ' — вебинар: ' + C.title;
+
+  /* ---- price line (пусто — скрыть) ---- */
+  document.querySelectorAll('[data-price]').forEach(function(el){
+    if (C.priceLine) el.textContent = C.priceLine; else el.hidden = true;
+  });
 
   /* ---- registration links ---- */
   var reg = safeUrl(C.registrationUrl), external = /^https?:/.test(reg) && reg.indexOf(location.origin) !== 0;
@@ -559,16 +654,6 @@ footer .handle{display:inline-block;font-weight:800;color:var(--ice);text-decora
   /* ---- handle link ---- */
   var h = document.getElementById('handle');
   if (C.handleUrl) { h.href = safeUrl(C.handleUrl); h.target='_blank'; h.rel='noopener'; } else { h.removeAttribute('href'); }
-
-  /* ---- program cards ---- */
-  var cards = document.getElementById('cards');
-  (C.program||[]).forEach(function(p, i){
-    if (typeof p === 'string') p = {title:p, text:''};
-    var li = document.createElement('li'); li.className = 'card reveal d' + (i%3+1);
-    var h3 = document.createElement('h3'); h3.textContent = p.title; li.appendChild(h3);
-    if (p.text){ var t = document.createElement('p'); t.textContent = p.text; li.appendChild(t); }
-    cards.appendChild(li);
-  });
 
   /* ---- video or storyboard ---- */
   var screen = document.getElementById('screen'), dots = document.getElementById('dots');
@@ -590,15 +675,14 @@ footer .handle{display:inline-block;font-weight:800;color:var(--ice);text-decora
       if (/video_ext\.php/.test(url.pathname)) return {type:'iframe', src:url.href};
       if ((m=(url.pathname+url.search).match(/video(-?\d+)_(\d+)/))) return {type:'iframe', src:'https://vk.com/video_ext.php?oid='+m[1]+'&id='+m[2]+'&hd=2'};
     }
-    return {type:'iframe', src:url.href};   // любая другая https-ссылка на плеер
+    return {type:'iframe', src:url.href};
   }
 
   var emb = C.videoUrl ? embedFor(C.videoUrl) : null;
   if (emb){
-    document.getElementById('videoLead').textContent = 'Посмотрите ролик перед вебинаром.';
     var el;
     if (emb.type === 'video'){ el = document.createElement('video'); el.controls = true; el.preload = 'metadata'; el.playsInline = true; el.src = emb.src; }
-    else { el = document.createElement('iframe'); el.src = emb.src; el.title = 'Ролик'; el.loading = 'lazy';
+    else { el = document.createElement('iframe'); el.src = emb.src; el.title = 'Ролик «Когда прошлое встречает будущее»'; el.loading = 'lazy';
       el.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen'; el.allowFullscreen = true; }
     screen.appendChild(el);
   } else {
