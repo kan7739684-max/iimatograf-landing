@@ -29,7 +29,7 @@
    ===================================================================== */
 const SOYUZ = {
   registrationUrl: 'https://cinematoschool.ru/iimatograf_pay',
-  videoUrl: 'https://vimeo.com/1200400319',
+  videoUrl: 'https://rutube.ru/video/cb2cfa4675796c803f71f7c802a8162e/',
   ctaText: 'Записаться на интенсив',
   priceLine: 'Вступительный взнос — 2 900 ₽',
 
@@ -434,7 +434,29 @@ footer .handle{display:inline-block;font-weight:800;color:var(--ice);text-decora
 @media (min-width:720px){
   .who{grid-template-columns:repeat(4,1fr)}
   .who li.all{grid-column:auto/span 1}
-  .works{grid-template-columns:repeat(2,1fr)}
+  .works{grid-template-columns:repeat(3,1fr)}
+}
+
+/* «Вопросы» (FAQ) */
+.faq-list{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.faq-item{border-radius:18px;background:linear-gradient(140deg,rgba(24,30,66,.82),rgba(12,16,40,.82));
+  border:1px solid rgba(246,200,106,.22);box-shadow:0 10px 30px rgba(0,0,0,.3);overflow:hidden;
+  transition:border-color .3s}
+.faq-item[open]{border-color:rgba(246,200,106,.55)}
+.faq-item summary{position:relative;cursor:pointer;list-style:none;padding:18px 52px 18px 20px;
+  font-weight:800;font-size:1.05rem;line-height:1.35;color:#fff;user-select:none}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"";position:absolute;right:20px;top:50%;width:10px;height:10px;
+  border-right:2px solid var(--gold-2);border-bottom:2px solid var(--gold-2);
+  transform:translateY(-70%) rotate(45deg);transition:transform .25s}
+.faq-item[open] summary::after{transform:translateY(-20%) rotate(225deg)}
+.faq-a{padding:0 20px 18px;color:var(--muted);font-size:.97rem;line-height:1.55}
+.faq-a p{margin:0 0 10px}
+.faq-a p:last-child{margin-bottom:0}
+.faq-a a{color:var(--gold-2);text-decoration:underline;text-underline-offset:3px}
+@media (max-width:719px){
+  .faq-item summary{font-size:.98rem;padding:16px 46px 16px 16px}
+  .faq-a{padding:0 16px 16px;font-size:.94rem}
 }
 </style>
 </head>
@@ -556,7 +578,7 @@ footer .handle{display:inline-block;font-weight:800;color:var(--ice);text-decora
     </div>
   </section>
 
-  <!-- 7. РАБОТЫ УЧАСТНИКОВ (2 ролика Vimeo aimatograf: 1200401116, 1200404997; 1200400319 убран — дублирует ролик в начале страницы)
+  <!-- 7. РАБОТЫ УЧАСТНИКОВ (3 ролика Vimeo aimatograf: 1200400319, 1200401116, 1200404997)
        Как добавить работу: внутри нужного <div class="screen"> замените
        <div class="work-ph" ...></div> и <div class="play">...</div> на плеер:
          Rutube: <iframe src="https://rutube.ru/play/embed/ID_ВИДЕО" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen loading="lazy" title="Работа участника"></iframe>
@@ -574,11 +596,16 @@ footer .handle{display:inline-block;font-weight:800;color:var(--ice);text-decora
       </div>
       <div class="works">
         <div class="work reveal d1">
+          <div class="screen"><iframe src="https://player.vimeo.com/video/1200400319?dnt=1&amp;title=0&amp;byline=0&amp;portrait=0" loading="lazy" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="ИИМАТОГРАФ. Изучение нейросетей сказочным образом"></iframe></div>
+          <h3 class="work-title">ИИМАТОГРАФ. Изучение нейросетей сказочным образом</h3>
+          <p class="work-cap">Сказочная методика: осваиваем ИИ через творчество · 1:59</p>
+        </div>
+        <div class="work reveal d2">
           <div class="screen"><iframe src="https://player.vimeo.com/video/1200401116?dnt=1&amp;title=0&amp;byline=0&amp;portrait=0" loading="lazy" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="Создание сказок и притч в нейросети"></iframe></div>
           <h3 class="work-title">Создание сказок и притч в нейросети</h3>
           <p class="work-cap">Сказки и притчи, придуманные и оживлённые вместе с ИИ · 2:31</p>
         </div>
-        <div class="work reveal d2">
+        <div class="work reveal d3">
           <div class="screen"><iframe src="https://player.vimeo.com/video/1200404997?dnt=1&amp;title=0&amp;byline=0&amp;portrait=0" loading="lazy" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="NEXT T — рекламный ролик"></iframe></div>
           <h3 class="work-title">NEXT T — рекламный ролик</h3>
           <p class="work-cap">Реклама, полностью созданная в нейросетях · 0:45</p>
@@ -587,7 +614,58 @@ footer .handle{display:inline-block;font-weight:800;color:var(--ice);text-decora
     </div>
   </section>
 
-  <!-- 8. ФИНАЛЬНЫЙ ПРИЗЫВ -->
+
+  <!-- 8. ВОПРОСЫ -->
+  <section class="faq-sec" id="faq">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="ring-deco"></div>
+        <span class="sec-label">Вопросы</span>
+        <h2>Ответы на частые вопросы</h2>
+        <p class="lead">Коротко о том, как всё устроено: оплата, площадка, расписание и формат занятий.</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item reveal d1">
+          <summary>Как оплачивать?</summary>
+          <div class="faq-a">
+            <p>Нажмите любую кнопку «Записаться на интенсив» на этой странице. Откроется защищённая страница оплаты на платформе GetCourse: <a href="https://cinematoschool.ru/iimatograf_pay" data-reg>cinematoschool.ru/iimatograf_pay</a>.</p>
+            <p>На странице доступны все способы оплаты, которые предлагает GetCourse. Можно оплатить сразу или в рассрочку.</p>
+            <p>После оплаты на почту придёт письмо со ссылкой на уроки и на закрытый чат, где эксперты поддерживают вас ежедневно.</p>
+          </div>
+        </details>
+        <details class="faq-item reveal d2">
+          <summary>Где проходят занятия?</summary>
+          <div class="faq-a">
+            <p>Записанные уроки интенсива смотрите на платформе GetCourse в удобное вам время.</p>
+            <p>Живые занятия и вебинары проходят в Zoom. Ссылки появляются в письме после оплаты и в закрытом чате.</p>
+          </div>
+        </details>
+        <details class="faq-item reveal d3">
+          <summary>По каким дням и в какое время?</summary>
+          <div class="faq-a">
+            <p>Живые занятия интенсива: вторник и пятница в 18:00 МСК, около 1,5 часа.</p>
+            <p>По средам проходит вебинар «Союза ИИМАТОГРАФИСТОВ». Точное расписание вашего потока придёт после оплаты.</p>
+          </div>
+        </details>
+        <details class="faq-item reveal d1">
+          <summary>Будет ли запись?</summary>
+          <div class="faq-a">
+            <p>Да. Записи живых занятий выкладываем на платформу GetCourse, чтобы можно было пересмотреть или догнать материал, если не получилось быть в эфире.</p>
+          </div>
+        </details>
+        <details class="faq-item reveal d2">
+          <summary>Вебинары живые или записанные уроки?</summary>
+          <div class="faq-a">
+            <p>И то, и другое. На GetCourse вас ждут записанные уроки по дням интенсива.</p>
+            <p>Плюс живые встречи в Zoom: занятия два раза в неделю и вебинары Союза по средам. Между занятиями поддержка ежедневно в чате с экспертами.</p>
+          </div>
+        </details>
+      </div>
+      <div class="after reveal"><a class="btn" data-reg href="https://cinematoschool.ru/iimatograf_pay"><span data-bind="ctaText">Записаться на интенсив</span></a></div>
+    </div>
+  </section>
+
+  <!-- 9. ФИНАЛЬНЫЙ ПРИЗЫВ -->
   <section class="cta" id="register">
     <div class="wrap">
       <div class="cta-box reveal">
@@ -604,7 +682,7 @@ footer .handle{display:inline-block;font-weight:800;color:var(--ice);text-decora
   </section>
 </main>
 
-<!-- 9. FOOTER -->
+<!-- 10. FOOTER -->
 <footer>
   <div class="wrap">
     <div class="fbrand" data-bind="brand">ИИМАТОГРАФ</div>
