@@ -31,7 +31,7 @@ const SOYUZ = {
   registrationUrl: 'https://cinematoschool.ru/iimatograf_pay',
   videoUrl: 'https://rutube.ru/video/cb2cfa4675796c803f71f7c802a8162e/',
   ctaText: 'Вступить в Союз',
-  priceLine: 'Вступительный взнос — 2 900 ₽. В подарок: двухнедельный интенсив и три месяца занятий в клубе бесплатно',
+  priceLine: '<span class="pl-fee">Вступительный взнос <b class="pl-sum">2 900 ₽</b></span><span class="pl-gift"><span class="pl-ico">🎁</span><span><span class="pl-tag">В подарок</span><span class="pl-items"><strong>двухнедельный интенсив</strong> + <strong>3 месяца занятий в клубе</strong> бесплатно</span></span></span>',
 
   /* Бренд (обычно менять не нужно) */
   brand: 'ИИМАТОГРАФ',
@@ -382,8 +382,15 @@ footer .handle{display:inline-block;font-weight:800;color:var(--ice);text-decora
 .hero h1 .nm{white-space:nowrap;hyphens:manual;-webkit-hyphens:manual}
 .hero-lead{margin:16px auto 0;max-width:720px;font-family:var(--serif);font-style:italic;font-weight:600;
   font-size:clamp(1.2rem,4.4vw,1.6rem);color:var(--gold-2);line-height:1.35}
-.price-line{display:inline-block;max-width:min(680px,100%);line-height:1.4;margin:18px 0 0;padding:8px 18px;border-radius:22px;font-weight:700;font-size:1rem;
-  color:var(--text);background:rgba(13,19,48,.6);border:1px solid rgba(246,200,106,.4);box-shadow:0 0 18px rgba(246,200,106,.12)}
+.price-line{display:inline-flex;flex-direction:column;align-items:center;gap:10px;max-width:min(560px,100%);margin:22px auto 0;padding:18px 26px;border-radius:20px;font-weight:600;font-size:1rem;line-height:1.35;
+  color:var(--text);background:linear-gradient(135deg,rgba(246,200,106,.18),rgba(95,184,255,.12));border:1.5px solid rgba(246,200,106,.75);box-shadow:0 0 28px rgba(246,200,106,.28),inset 0 0 22px rgba(255,226,160,.08)}
+.pl-fee{font-size:1.05rem;color:var(--muted)}
+.pl-sum{display:inline-block;margin-left:6px;font-size:1.55rem;font-weight:800;color:var(--gold-2);text-shadow:0 0 14px rgba(246,200,106,.55);white-space:nowrap}
+.pl-gift{display:flex;align-items:center;gap:12px;text-align:left;padding-top:10px;border-top:1px dashed rgba(246,200,106,.45)}
+.pl-ico{font-size:2rem;line-height:1;filter:drop-shadow(0 0 8px rgba(246,200,106,.6))}
+.pl-tag{display:inline-block;margin-bottom:3px;padding:2px 10px;border-radius:999px;background:var(--gold);color:var(--navy);font-size:.78rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.pl-items{display:block;color:var(--text)}
+.pl-items strong{color:var(--gold-2)}
 .price-line[hidden]{display:none}
 .price-line b{color:var(--gold-2);white-space:nowrap}
 .cta .price-wrap{margin-top:4px}
@@ -489,7 +496,7 @@ footer .handle{display:inline-block;font-weight:800;color:var(--ice);text-decora
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
       <!-- PRICE_LINE: текст берётся из SOYUZ.priceLine (пусто '' — строка скрыта) -->
-      <div class="reveal d3"><p class="price-line" data-price>Вступительный взнос — 2 900 ₽. В подарок: двухнедельный интенсив и три месяца занятий в клубе бесплатно</p></div>
+      <div class="reveal d3"><p class="price-line" data-price><span class="pl-fee">Вступительный взнос <b class="pl-sum">2 900 ₽</b></span><span class="pl-gift"><span class="pl-ico">🎁</span><span><span class="pl-tag">В подарок</span><span class="pl-items"><strong>двухнедельный интенсив</strong> + <strong>3 месяца занятий в клубе</strong> бесплатно</span></span></span></p></div>
 
       <div class="banner reveal">
         <div class="halo"></div>
@@ -675,7 +682,7 @@ footer .handle{display:inline-block;font-weight:800;color:var(--ice);text-decora
         <p class="cta-title">Если вы давно мечтали творить, но не знали, с чего начать, — начните вместе с нами.</p>
         <div class="actions"><a class="btn" data-reg href="https://cinematoschool.ru/iimatograf_pay"><span data-bind="ctaText">Вступить в Союз</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-        <div class="price-wrap"><p class="price-line" data-price>Вступительный взнос — 2 900 ₽. В подарок: двухнедельный интенсив и три месяца занятий в клубе бесплатно</p></div>
+        <div class="price-wrap"><p class="price-line" data-price><span class="pl-fee">Вступительный взнос <b class="pl-sum">2 900 ₽</b></span><span class="pl-gift"><span class="pl-ico">🎁</span><span><span class="pl-tag">В подарок</span><span class="pl-items"><strong>двухнедельный интенсив</strong> + <strong>3 месяца занятий в клубе</strong> бесплатно</span></span></span></p></div>
         <p class="welcome">Добро пожаловать в «Союз&nbsp;ИИМАТОГРАФИСТОВ»!</p>
       </div>
     </div>
@@ -716,7 +723,7 @@ footer .handle{display:inline-block;font-weight:800;color:var(--ice);text-decora
 
   /* ---- price line (пусто — скрыть) ---- */
   document.querySelectorAll('[data-price]').forEach(function(el){
-    if (C.priceLine) el.textContent = C.priceLine; else el.hidden = true;
+    if (C.priceLine) el.innerHTML = C.priceLine; else el.hidden = true;
   });
 
   /* ---- registration links ---- */
